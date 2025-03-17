@@ -56,7 +56,7 @@ def crear_tarea(tarea: TareaModel, db: Session = Depends(get_db)):
     return db_tarea
 
 @app.get("/tareas/{lista_id}")
-def get_tareas(lista_id: str, db: Session = Depends(get_db)):
-    return db.query(TareaMD).filter(TareaMD.lista_id == lista_id).all()
+def get_tareas(lista_id: int, db: Session = Depends(get_db)):
+    return db.query(TareaMD).filter(TareaMD.id_lista == lista_id).all()
 
 

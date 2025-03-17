@@ -23,5 +23,5 @@ class TareaModel(BaseModel):
     titulo: str
     descripcion: str = ""
 
-    class Config:
-        orm_mode = True
+    #class Config:
+        #orm_mode = True
