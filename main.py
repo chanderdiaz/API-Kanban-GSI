@@ -43,8 +43,8 @@ def crear_lista(lista: ListaModel, db: Session = Depends(get_db)):
     return db_lista
 
 @app.get("/listas/{tablero_id}")
-def get_listas(tablero_id: str, db: Session = Depends(get_db)):
-    return db.query(ListaMD).filter(ListaMD.tablero_id == tablero_id).all()
+def get_listas(tablero_id: int, db: Session = Depends(get_db)):
+    return db.query(ListaMD).filter(ListaMD.id_tablero == tablero_id).all()
 
 # Endpoints para tareas
 @app.post("/tareas/")

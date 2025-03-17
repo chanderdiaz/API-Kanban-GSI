@@ -14,8 +14,8 @@ class ListaModel(BaseModel):
     id_tablero: int
     nombre: str
 
-    class Config:
-        orm_mode = True
+    #class Config:
+        #orm_mode = True
 
 class TareaModel(BaseModel):
     id: int
